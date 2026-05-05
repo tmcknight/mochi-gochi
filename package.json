@@ -10,17 +10,18 @@
   },
   "dependencies": {
     "next": "^16.2.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.5.10",
-    "tailwindcss": "^3.4.6",
-    "typescript": "^5.5.3"
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
   },
   "overrides": {
     "postcss": "^8.5.10"
