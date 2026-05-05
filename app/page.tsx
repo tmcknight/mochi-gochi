@@ -349,7 +349,7 @@ export default function Page() {
           <div className="flex items-center gap-3">
             <div className="card-chunk px-4 py-2 tilted bg-butter">
               <span className="font-display text-2xl md:text-3xl font-black">mochi</span>
-              <span className="ml-2 text-xs md:text-sm font-bold uppercase tracking-widest">.pet</span>
+              <span className="ml-1 text-xs md:text-sm font-bold uppercase tracking-widest">·gochi</span>
             </div>
             <div className="hidden sm:block card-chunk px-3 py-2 tilted-r bg-mint text-xs font-black uppercase tracking-widest">
               v0.1 · alive
@@ -361,7 +361,7 @@ export default function Page() {
             </div>
             <button
               onClick={() => {
-                if (confirm("Reset Mochi? Your blob will lose all memories ;_;")) reset();
+                if (confirm("Reset your gochi? Your blob will lose all memories ;_;")) reset();
               }}
               className="card-chunk px-3 py-2 bg-white text-xs font-black uppercase tracking-widest hover:bg-coral hover:text-white transition-colors"
             >

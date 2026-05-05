@@ -18,7 +18,8 @@ const randomVariant = (): MochiVariant => ({
   ears: EARS[Math.floor(Math.random() * EARS.length)],
 });
 
-const STORAGE_KEY = "mochi-pet-v2";
+const STORAGE_KEY = "mochi-gochi-v1";
+const LEGACY_STORAGE_KEY = "mochi-pet-v2";
 
 const initial: PetState = {
   happiness: 80,
@@ -45,7 +46,14 @@ export function usePet() {
   // hydrate
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      let raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
+        if (legacy) {
+          raw = legacy;
+          localStorage.removeItem(LEGACY_STORAGE_KEY);
+        }
+      }
       if (raw) {
         const parsed = JSON.parse(raw) as PetState;
         const elapsedMin = (Date.now() - parsed.lastTick) / 60000;

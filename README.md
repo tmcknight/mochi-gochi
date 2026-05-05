@@ -1,4 +1,4 @@
-# mochi-pet
+# mochi-gochi
 
 A cute virtual pet you can pet, feed, shake, and accidentally explode. Built with Next.js 14, React, TypeScript, and Tailwind.
 
