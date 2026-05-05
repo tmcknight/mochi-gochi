@@ -1,6 +1,6 @@
 # mochi-gochi
 
-A cute virtual pet you can pet, feed, shake, and accidentally explode. Built with Next.js 14, React, TypeScript, and Tailwind.
+A cute virtual pet you can pet, feed, shake, and accidentally explode. Built with Next.js 16 (Turbopack), React 18, TypeScript, and Tailwind.
 
 ![mochi-gochi screenshot](./screenshot.png)
 
@@ -44,8 +44,11 @@ Open the printed `*.devtunnels.ms` URL on your phone.
 
 ## Stack
 
-- Next.js 14 (App Router)
-- React 18
-- TypeScript
-- Tailwind CSS
+- Next.js 16 (App Router, Turbopack)
+- React 18.3
+- TypeScript 5.5
+- Tailwind CSS 3.4
+- PostCSS 8.5 (pinned via `overrides` to clear nested-dep advisories)
 - SVG for all pet rendering
+
+Requires Node `>=20.9.0` (Next 16 engine constraint).
