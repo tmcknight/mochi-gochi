@@ -6,7 +6,7 @@ A cute virtual pet you can pet, feed, shake, and accidentally explode. Built wit
 
 ## About
 
-This project was built as part of [Nick Chapsas](https://nickchapsas.com/)' [**Vibe Coding for Production**](https://dometrain.com/workshop/vibe-coding-for-production/) workshop on Dometrain.
+This project was built as part of [Nick Chapsas](https://nickchapsas.com/)' [**Vibe Coding for Production**](https://dometrain.com/workshop/vibe-coding-for-production/) — a live workshop delivered at [NDC Toronto 2026](https://ndctoronto.com/) (also offered online via Dometrain).
 
 The workshop reframes AI-assisted development as disciplined engineering rather than reckless automation — teaching how to practice *agentic coding* safely while keeping architectural control. Topics include Claude Code and Codex, setting boundaries for AI agents, converting vague requirements into testable specs, building extended multi-hour generation/testing plans, security and stability verification, custom skills, and Model Context Protocol (MCP) integration. The goal: collaborate with AI as a "senior engineer" partner and ship production code that's still maintainable and reviewable.
 
