@@ -2,6 +2,8 @@
 
 A cute virtual pet you can pet, feed, shake, and accidentally explode. Built with Next.js 14, React, TypeScript, and Tailwind.
 
+![mochi-gochi screenshot](./screenshot.png)
+
 ## About
 
 This project was built as part of [Nick Chapsas](https://nickchapsas.com/)' [**Vibe Coding for Production**](https://dometrain.com/workshop/vibe-coding-for-production/) workshop on Dometrain.
