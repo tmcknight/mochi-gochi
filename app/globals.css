@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@400;700;900&family=Nunito:wght@500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grain: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.16 0 0 0 0 0.2 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+html, body {
+  background: #FFF5E4;
+  color: #2D2A32;
+  font-family: "Nunito", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 12% 18%, #FFB5A7 0, transparent 28%),
+    radial-gradient(circle at 88% 22%, #B7E4C7 0, transparent 30%),
+    radial-gradient(circle at 78% 88%, #FFE066 0, transparent 30%),
+    radial-gradient(circle at 18% 80%, #D4C5F9 0, transparent 28%);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dot-grid {
+  background-image: radial-gradient(#2D2A32 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.font-display { font-family: "Gluten", cursive; font-variation-settings: "wdth" 125; }
+
+@keyframes sparkle {
+  0% { transform: translate(0,0) scale(0) rotate(0); opacity: 1; }
+  60% { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1) rotate(180deg); opacity: 0; }
+}
+
+.sparkle {
+  animation: sparkle 0.9s ease-out forwards;
+}
+
+@keyframes zzz {
+  0% { transform: translate(0,0) scale(0.6); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translate(40px,-80px) scale(1.4); opacity: 0; }
+}
+.zzz { animation: zzz 2.4s ease-out infinite; }
+
+@keyframes shake-rumble {
+  0%,100% { transform: translate(0,0) rotate(0); }
+  20% { transform: translate(-6px,2px) rotate(-3deg); }
+  40% { transform: translate(5px,-3px) rotate(2deg); }
+  60% { transform: translate(-4px,4px) rotate(-2deg); }
+  80% { transform: translate(6px,-1px) rotate(3deg); }
+}
+.rumble { animation: shake-rumble 0.45s ease-in-out; }
+
+@keyframes explode {
+  0% { transform: scale(1) rotate(0); opacity: 1; filter: brightness(1); }
+  20% { transform: scale(1.5) rotate(-8deg); opacity: 1; filter: brightness(2); }
+  35% { transform: scale(1.7) rotate(10deg); opacity: 1; filter: brightness(3); }
+  60% { transform: scale(0.2) rotate(-30deg); opacity: 0.6; filter: brightness(1.5); }
+  100% { transform: scale(0) rotate(60deg); opacity: 0; filter: brightness(1); }
+}
+.exploding { animation: explode 0.9s cubic-bezier(.17,.67,.32,1.34) forwards; }
+
+@keyframes flash-bg {
+  0%,100% { background-color: transparent; }
+  10% { background-color: rgba(255,255,255,0.95); }
+  30% { background-color: rgba(255,107,107,0.7); }
+  60% { background-color: rgba(255,224,102,0.5); }
+}
+.flash { animation: flash-bg 0.9s ease-out; }
+
+@keyframes boom-pop {
+  0% { transform: translate(-50%,-50%) scale(0) rotate(-20deg); opacity: 0; }
+  30% { transform: translate(-50%,-50%) scale(1.4) rotate(8deg); opacity: 1; }
+  70% { transform: translate(-50%,-50%) scale(1) rotate(-4deg); opacity: 1; }
+  100% { transform: translate(-50%,-50%) scale(2.2) rotate(0); opacity: 0; }
+}
+.boom-pop { animation: boom-pop 1.2s ease-out forwards; }
+
+@keyframes egg-wobble {
+  0%,100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-6deg) translateY(-2px); }
+  50% { transform: rotate(0deg) translateY(0); }
+  75% { transform: rotate(6deg) translateY(-2px); }
+}
+
+.btn-chunk {
+  @apply relative inline-flex items-center justify-center gap-2 rounded-full border-[3px] border-ink px-5 py-3 font-black uppercase tracking-wider shadow-chunk transition-all duration-150 active:translate-x-[4px] active:translate-y-[4px] active:shadow-chunkPress;
+  font-family: "Gluten", cursive;
+}
+
+.card-chunk {
+  @apply rounded-3xl border-[3px] border-ink bg-white shadow-chunk;
+}
+
+.stat-bar-track {
+  @apply h-4 w-full rounded-full border-[2.5px] border-ink bg-cream overflow-hidden relative;
+}
+.stat-bar-fill {
+  @apply h-full transition-all duration-500 ease-out relative;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.35) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+.tilted { transform: rotate(-2deg); }
+.tilted-r { transform: rotate(2deg); }
+
+/* custom cursor for pet area */
+.pet-cursor {
+  cursor: grab;
+}
+.pet-cursor:active {
+  cursor: grabbing;
+}
